@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Remove a rolagem */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.linha {
+    position: relative;
+    width: 90vw; /* Agora ocupa toda a largura da tela */
+    height: 10px;
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+/* Criando a setinha no final da linha */
+.linha::after {
+    content: "";
+    position: absolute;
+    right: -10px; /* Encosta na borda */
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 15px solid black; /* Cor e direção da seta */
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+}
+
+.acontecimentos {
+    display: flex;
+    justify-content: space-around; /* Distribui os elementos de forma uniforme */
+    align-items: center;
+    width: 90vw;
+}
+
+.acontecimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.acontecimento img {
+    width: 110px;
+    height: 110px;
+}
